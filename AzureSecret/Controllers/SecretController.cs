@@ -11,8 +11,8 @@ namespace AzureSecret.Controllers
     [Route("[controller]")]
     public class SecretController : ControllerBase
     {
-        private const string keyVaultURI = "your-keyvalut-uri";
-        private const string secretName = "your-secret-name";
+        private const string KeyVaultUri = "your-keyvalut-uri";
+        private const string SecretName = "your-secret-name";
         private readonly ILogger<SecretController> _logger;
 
         public SecretController(ILogger<SecretController> logger)
@@ -23,8 +23,8 @@ namespace AzureSecret.Controllers
         [HttpGet]
         public async Task<string> Get()
         {
-            var client = new SecretClient(new Uri(keyVaultURI), new DefaultAzureCredential());
-            var secret = await client.GetSecretAsync(secretName);
+            var client = new SecretClient(new Uri(KeyVaultUri), new DefaultAzureCredential());
+            var secret = await client.GetSecretAsync(SecretName);
             return secret.Value.Value;
         }
     }
