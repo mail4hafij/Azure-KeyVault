@@ -11,7 +11,7 @@ namespace AzureSecret.Controllers
     [Route("[controller]")]
     public class SecretController : ControllerBase
     {
-        private const string KeyVaultUri = "your-keyvalut-uri";
+        private const string KeyVaultUri = "your-keyvault-uri";
         private const string SecretName = "your-secret-name";
         private readonly ILogger<SecretController> _logger;
 
