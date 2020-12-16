@@ -14,4 +14,5 @@ private const string SecretName = "your-secret-name";
 3. Explain how the managed identity works.
 4. Explain the project, what it does?
 
+## Conceptual model
 <img src="Architecture.jpg" />
